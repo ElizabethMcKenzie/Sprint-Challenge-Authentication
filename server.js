@@ -11,7 +11,6 @@ const corsOptions = {
 };
 
 server.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
 
 routes(server);

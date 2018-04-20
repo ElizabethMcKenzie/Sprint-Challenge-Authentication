@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const createUser = (req, res) => {
   console.log('creating');
   const { username, password } = req.body;
-  console.log({ username, password });
+  console.log(req);
   const user = new User({ username, password });
   user
     .save()
