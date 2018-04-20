@@ -18,6 +18,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre('save', function(next) {
+  console.log('inside save');
   bcrypt.hash(this.password, SALT_ROUNDS, (err, hash) => {
     if (err) {
       return next(err);
